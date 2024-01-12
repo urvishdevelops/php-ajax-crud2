@@ -37,18 +37,20 @@ class Crud extends Dbconfig
 
     }
 
-    public function delete($id)
+    public function delete($table, $deleteId)
     {
+        $query = "DELETE FROM $table WHERE id=$deleteId";
 
-        $query = "DELETE * FROM youtuber where id = $id";
         $result = $this->conn->query($query);
-        if ($result) {
-           return true;
+
+
+        if ($result == False) {
+            echo "Cannot delete the $deleteId in the given $table";
+            return False;
         } else {
-            echo "Not deleted query issue!";
+            return True;
         }
     }
-
 
 }
 

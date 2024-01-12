@@ -11,19 +11,20 @@ $crud = new crud();
 
 <head>
     <title>Add Data</title>
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
-    
+
     <link href="toastr.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
-
-
-</html>
 
 <body>
 
@@ -49,25 +50,25 @@ $crud = new crud();
             <div class="mb-3">
                 <input id="profile" type="file" name="profile" />
             </div>
-            <div class="dropdown mb-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Status
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Active</a>
-                    <a class="dropdown-item" href="#">Inactive</a>
-                </div>
+            <div class="mb-3 col-3">
+                <select class="form-select form-select-sm mb-4" aria-label=".form-select-lg example" id="status"
+                    name="status">
+                    <option selected>Open this select menu</option>
+                    <option value="1">active</option>
+                    <option value="2">inactive</option>
+                </select>
             </div>
-            <button type="submit" id="autorsFormButton" class="btn btn-primary" value="Submit">Submit</button>
+
+            <button type="submit" id="ytFormButton" class="btn btn-primary" value="Submit">Submit</button>
         </form>
 
 
 
         <!-- View  -->
-        <!-- <div class="form-outline w-50 mt-5">
-            <input type="email" placeholder="Searc|" class="form-control input-sm border border-primary" id="txtsearch">
-        </div> -->
+        <div class="form-outline w-50 mt-5 d-flex flex-end">
+            <input type="email" placeholder="Search her|"
+                class="form-control input-sm border border-info border-2 mb-3  " id="ytsearch">
+        </div>
         <table class="table table-striped  table-bordered mt-5">
             <thead>
 
@@ -81,6 +82,8 @@ $crud = new crud();
                                 class='fa fa-arrow-down dec'></a>
                     </td>
                     <td>Biz Mail<a class="inc"><i class='fa fa-arrow-up'></a> <a class="dec"><i
+                                class='fa fa-arrow-down dec'></a></td>
+                    <td>Status<a class="inc"><i class='fa fa-arrow-up'></a> <a class="dec"><i
                                 class='fa fa-arrow-down dec'></a></td>
                     <td>Youtubers Profile</td>
                     <td>Actions</td>
@@ -96,13 +99,10 @@ $crud = new crud();
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="index.js">
-</script>
-<!-- <script src="toastr.js"></script> -->
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+    <script src="toastr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
     integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
